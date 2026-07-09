@@ -1,0 +1,66 @@
+.MainOverview{
+    width: 2020px;
+    height: 600px;
+
+    margin-left: 60px;
+    margin-top: 50px;
+
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-family: 'Lexend';
+    font-weight: 700;
+
+    text-align: center;
+    padding-top: 1px;
+
+    float: left;
+
+    background-color: rgba(255, 255, 255, 0.034);
+    box-shadow: 0 0px 100px rgba(2, 2, 8, 0.281);
+}
+
+.BottomCat{
+    width: 632px;
+    height: 558px;
+
+    margin-left: 60px;
+    margin-top: 50px;
+
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-family: 'Lexend';
+    font-weight: 700;
+
+    text-align: center;
+
+    float: left;
+
+    background-color: rgba(255, 255, 255, 0.034);
+    box-shadow: 0 0px 100px rgba(2, 2, 8, 0.281);
+}
+
+
+.Label{
+    margin-top: -26px;
+
+
+    height: 75px;
+
+    background-color: rgba(12, 8, 34, 0.671);
+    box-shadow: 0 0px 20px rgba(2, 3, 27, 0.349);
+}
+
+.WelcomeText{
+    position: relative;
+    top: 25%;
+}
+
+.OverallChart{
+    width: 1970px;
+    height: 485px;
+
+    margin-left: 25px;
+    margin-top: 20px;
+
+
+}

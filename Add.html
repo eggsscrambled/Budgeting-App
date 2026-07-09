@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Transaction</title>
+
+    <link rel="stylesheet" href="Main.css">
+    <link rel="stylesheet" href="Add.css">
+
+</head>
+
+
+<body>
+
+  <div id="scale-stage">
+
+       <div class = "Wrapper Round">
+
+              <div class = "AddCard Round">
+                     <div class = "Round Label">
+                             <p class="WelcomeText"> Add Transaction </p>
+                     </div>
+
+                     <div class="AddForm">
+                            <div class="EntryToggle">
+                                   <button type="button" class="ToggleBtn income active" id="incomeBtn">Income</button>
+                                   <button type="button" class="ToggleBtn expense" id="expenseBtn">Expense</button>
+                            </div>
+
+                            <div class="FormGrid">
+                                   <div class="FormField">
+                                          <label for="amount">Amount</label>
+                                          <input type="number" id="amount" placeholder="0.00" min="0" step="0.01">
+                                   </div>
+                                   <div class="FormField">
+                                          <label for="category">Category</label>
+                                          <select id="category"></select>
+                                   </div>
+                                   <div class="FormField">
+                                          <label for="description">Description</label>
+                                          <input type="text" id="description" placeholder="e.g. Grocery shopping">
+                                   </div>
+                                   <div class="FormField">
+                                          <label for="date">Date</label>
+                                          <input type="date" id="date">
+                                   </div>
+                            </div>
+
+                            <button type="button" class="AddButton" id="addBtn">+ Add Transaction</button>
+                     </div>
+              </div>
+
+              <div class = "RecentCard Round">
+                     <div class = "Round Label">
+                             <p class="WelcomeText"> Recent Entries </p>
+                     </div>
+                     <div class="EntryList" id="entryList">
+                            <p class="EmptyState">No transactions yet — add your first one above.</p>
+                     </div>
+              </div>
+
+       </div>
+
+       <div class = "Total Round"> 
+              <p class="Total-Amount"> 00,00.00$ </p>
+              <p class="Total-Amount-Label"> ACCOUNTS TOTAL </p>
+       </div>
+
+       <div class = "Nav Round"> 
+
+              <br>
+              <br>
+              <br>
+                     
+               <a href="Overview.html" style="text-decoration: none; color: inherit;">   
+                     <div class = "Round NavButton"> 
+                           <img src="Icons/Overview.png" style="width: 40px; height: 40px;" class = "Icon">
+                            Overview
+                     </div>
+                     </a>
+                   
+              <br>
+              <br>
+                     <a href="Trends.html" style="text-decoration: none; color: inherit;">
+                            <div class = " NavButton Round"> 
+                                   <img src="Icons/Trends.png" style="width: 40px; height: 40px;" class = "Icon">
+                                   Trends
+                            </div>
+                     </a>
+              
+              <br>
+              <br>
+                     <a href="Insights.html" style="text-decoration: none; color: inherit;">
+                            <div class = " NavButton Round"> 
+                                   <img src="Icons/Insights.png" style="width: 40px; height: 40px;" class = "Icon">
+                                   Insights
+                            </div>
+                     </a>
+              
+              <br>
+              <br>
+                     <a href="Goals.html" style="text-decoration: none; color: inherit;">
+                            <div class = " NavButton Round"> 
+                                   <img src="Icons/Goals.png" style="width: 40px; height: 40px;" class = "Icon">
+                                   Goals
+                            </div>
+                     </a>
+              
+              <br>
+              <br>
+                     <a href="Add.html" style="text-decoration: none; color: inherit;">
+                            <div class = "NavButton Round CurrentPage"> 
+                                   <img src="Icons/Add.png" style="width: 40px; height: 40px;" class = "Icon">
+                                   Add
+                            </div>
+                     </a>
+              
+              <br>
+              <br>
+                        
+                            <div class = " NavButton Round"> 
+                                 <img src="Icons/About.png" style="width: 40px; height: 40px;" class = "Icon">
+                                 About Us
+                            </div>
+  
+                           
+
+
+
+       </div>
+
+       <div class = "Footer"> 
+              <img src="Logos/BBLogoFull.png" style="width: 375px; height: 375px;" class = "Logo">
+       </div>
+
+
+       <script src="Add.js"></script>
