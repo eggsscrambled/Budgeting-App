@@ -9,6 +9,7 @@
     font-family: 'Lexend';
 
     text-align: center;
+    padding-top: 1px;
     float: left;
 
     background-color: rgba(255, 255, 255, 0.034);
@@ -26,6 +27,7 @@
     font-family: 'Lexend';
 
     text-align: center;
+    padding-top: 1px;
     float: left;
 
     background-color: rgba(255, 255, 255, 0.034);
@@ -55,16 +57,19 @@
     cursor: pointer;
     background-color: #1c1c38;
     color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0px 10px rgba(29, 29, 53, 0.685);
 }
 
 .ToggleBtn.active.income{
     background-color: #2fbf71;
     color: #0c1f14;
+    box-shadow: 0 0px 25px rgba(47, 191, 113, 0.6);
 }
 
 .ToggleBtn.active.expense{
     background-color: #ff5c5c;
     color: #2b0d0d;
+    box-shadow: 0 0px 25px rgba(255, 92, 92, 0.6);
 }
 
 .FormGrid{
@@ -161,6 +166,12 @@
     margin-top: 3px;
 }
 
+.EntryRight{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
 .EntryAmount{
     font-family: 'Lexend';
     font-weight: 700;
@@ -169,3 +180,24 @@
 
 .EntryAmount.income{ color: #3ddc84; }
 .EntryAmount.expense{ color: #ff6b6b; }
+
+.DeleteBtn{
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.6);
+    font-family: 'Lexend';
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    padding: 0;
+    cursor: pointer;
+}
+
+.DeleteBtn:hover{
+    background-color: #ff5c5c;
+    color: #2b0d0d;
+    box-shadow: 0 0px 15px rgba(255, 92, 92, 0.6);
+}

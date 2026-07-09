@@ -73,14 +73,13 @@
               <br>
               <br>
               <br>
-                     
-               <a href="Overview.html" style="text-decoration: none; color: inherit;">   
-                     <div class = "Round NavButton"> 
-                           <img src="Icons/Overview.png" style="width: 40px; height: 40px;" class = "Icon">
-                            Overview
-                     </div>
+                     <a href="Overview.html" style="text-decoration: none; color: inherit;">
+                            <div class = " NavButton Round"> 
+                                   <img src="Icons/Overview.png" style="width: 40px; height: 40px;" class = "Icon">
+                                   Overview
+                            </div>
                      </a>
-                   
+
               <br>
               <br>
                      <a href="Trends.html" style="text-decoration: none; color: inherit;">
@@ -89,7 +88,7 @@
                                    Trends
                             </div>
                      </a>
-              
+
               <br>
               <br>
                      <a href="Insights.html" style="text-decoration: none; color: inherit;">
@@ -98,7 +97,7 @@
                                    Insights
                             </div>
                      </a>
-              
+
               <br>
               <br>
                      <a href="Goals.html" style="text-decoration: none; color: inherit;">
@@ -107,27 +106,22 @@
                                    Goals
                             </div>
                      </a>
-              
+
               <br>
               <br>
-                     <a href="Add.html" style="text-decoration: none; color: inherit;">
-                            <div class = "NavButton Round CurrentPage"> 
-                                   <img src="Icons/Add.png" style="width: 40px; height: 40px;" class = "Icon">
-                                   Add
-                            </div>
-                     </a>
-              
+                     <div class = "Round CurrentPage"> 
+                           <img src="Icons/Add.png" style="width: 40px; height: 40px;" class = "Icon">
+                            Add
+                     </div>
+
               <br>
               <br>
-                        
+                        <a href="About.html" style="text-decoration: none; color: inherit;">
                             <div class = " NavButton Round"> 
                                  <img src="Icons/About.png" style="width: 40px; height: 40px;" class = "Icon">
                                  About Us
                             </div>
-  
-                           
-
-
+                        </a>
 
        </div>
 
@@ -135,5 +129,21 @@
               <img src="Logos/BBLogoFull.png" style="width: 375px; height: 375px;" class = "Logo">
        </div>
 
+  </div>
 
+       <script src="Main.js"></script>
        <script src="Add.js"></script>
+       <script>
+        (function () {
+          var DESIGN_W = 2475, DESIGN_H = 1320;
+          var stage = document.getElementById('scale-stage');
+          function fit() {
+            var scale = Math.min(window.innerWidth / DESIGN_W, window.innerHeight / DESIGN_H);
+            stage.style.transform = 'scale(' + scale + ')';
+          }
+          window.addEventListener('resize', fit);
+          fit();
+        })();
+       </script>
+</body>
+</html>

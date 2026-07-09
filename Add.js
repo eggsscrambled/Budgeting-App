@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var currentType = 'income';
     var categories = {
-        income: ['Salary', 'Investment', 'Gift', 'Other'],
-        expense: ['Food', 'Entertainment', 'Bills', 'Other']
+        income: ['Salary', 'Freelance', 'Investment', 'Gift', 'Other'],
+        expense: ['Food', 'Rent', 'Transport', 'Entertainment', 'Bills', 'Other']
     };
 
     function populateCategories() {
@@ -30,6 +30,15 @@ document.addEventListener('DOMContentLoaded', function () {
         incomeBtn.classList.toggle('active', type === 'income');
         expenseBtn.classList.toggle('active', type === 'expense');
         populateCategories();
+    }
+
+    function showEmptyStateIfNeeded() {
+        if (!entryList.querySelector('.EntryRow')) {
+            var empty = document.createElement('p');
+            empty.className = 'EmptyState';
+            empty.textContent = 'No transactions yet — add your first one above.';
+            entryList.appendChild(empty);
+        }
     }
 
     incomeBtn.addEventListener('click', function () { setType('income'); });
@@ -60,12 +69,27 @@ document.addEventListener('DOMContentLoaded', function () {
             '<div class="EntryDesc">' + desc + '</div>' +
             '<div class="EntryMeta">' + category + ' · ' + date + '</div>';
 
+        var right = document.createElement('div');
+        right.className = 'EntryRight';
+
         var amt = document.createElement('div');
         amt.className = 'EntryAmount ' + currentType;
         amt.textContent = (currentType === 'income' ? '+$' : '-$') + amount.toFixed(2);
 
+        var deleteBtn = document.createElement('button');
+        deleteBtn.type = 'button';
+        deleteBtn.className = 'DeleteBtn';
+        deleteBtn.textContent = '×';
+        deleteBtn.addEventListener('click', function () {
+            row.remove();
+            showEmptyStateIfNeeded();
+        });
+
+        right.appendChild(amt);
+        right.appendChild(deleteBtn);
+
         row.appendChild(info);
-        row.appendChild(amt);
+        row.appendChild(right);
         entryList.prepend(row);
 
         amountInput.value = '';
