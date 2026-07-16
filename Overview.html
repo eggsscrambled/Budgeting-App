@@ -20,8 +20,18 @@
        <div class = "Wrapper Round">
              
               <div class = "Round MainOverview"> 
-                     <div class = "Round Label">  
+                     <div class = "Round Label" style="position: relative;">  
                              <p class="WelcomeText"> Total Balance </p>
+                             <div class="FilterContainer">
+                                    <label for="timeFrameFilter">Time Frame: </label>
+                                    <select id="timeFrameFilter" class="FilterSelect">
+                                           <option value="all">All Time</option>
+                                           <option value="this-month">This Month</option>
+                                           <option value="last-30">Last 30 Days</option>
+                                           <option value="last-90">Last 90 Days</option>
+                                           <option value="this-year">This Year</option>
+                                    </select>
+                             </div>
                      </div>
 
                      <div class = "OverallChart">
@@ -34,17 +44,27 @@
                      <div class = "Round Label">  
                              <p class="WelcomeText"> Spending Distribution </p>
                      </div>
+                     <div class="BottomCatContent ChartContainer">
+                            <canvas id="spendingChart"></canvas>
+                            <div id="spendingChartEmpty" class="EmptyState">No expense logs in this time frame.</div>
+                     </div>
               </div>
 
               <div class = "Round BottomCat"> 
                      <div class = "Round Label">  
                              <p class="WelcomeText"> Accounts </p>
                      </div>
+                     <div class="BottomCatContent ScrollableContent" id="overviewAccounts">
+                            <!-- Dynamic accounts list -->
+                     </div>
               </div>
 
               <div class = "Round BottomCat"> 
                      <div class = "Round Label">  
                              <p class="WelcomeText"> Categories </p>
+                     </div>
+                     <div class="BottomCatContent ScrollableContent" id="overviewCategories">
+                            <!-- Dynamic categories list -->
                      </div>
               </div>
 
@@ -124,9 +144,9 @@
 
   </div>
 
-       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-       <script src="Main.js"></script>
-       <script src="OverallChart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="Main.js"></script>
+        <script src="Overview.js"></script>
        <script>
         (function () {
           var DESIGN_W = 2475, DESIGN_H = 1320;

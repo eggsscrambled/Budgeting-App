@@ -1,0 +1,107 @@
+.AboutMain{
+    width: 2020px;
+    height: 612px;
+
+    margin-left: 60px;
+    margin-top: 50px;
+
+    color: rgb(255, 255, 255);
+    font-family: 'Lexend';
+
+    text-align: center;
+    padding-top: 1px;
+    float: left;
+
+    background-color: rgba(255, 255, 255, 0.034);
+    box-shadow: 0 0px 100px rgba(2, 2, 8, 0.281);
+}
+
+.AboutIntro{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 40px 60px;
+    box-sizing: border-box;
+}
+
+.AboutLogo{
+    width: 130px;
+    height: 130px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.AboutText{
+    text-align: left;
+    font-family: 'Lexend';
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 1.6;
+    color: rgb(224, 228, 250);
+    margin: -75px 0 0 0;
+}
+
+.AboutCat{
+    width: 632px;
+    height: 558px;
+
+    margin-left: 60px;
+    margin-top: 50px;
+
+    color: rgb(255, 255, 255);
+    font-family: 'Lexend';
+
+    text-align: center;
+    padding-top: 1px;
+    float: left;
+
+    background-color: rgba(255, 255, 255, 0.034);
+    box-shadow: 0 0px 100px rgba(2, 2, 8, 0.281);
+    
+}
+
+.AboutCatBody{
+    padding: 35px 40px;
+    box-sizing: border-box;
+}
+
+.AboutCatText{
+    text-align: left;
+    font-family: 'Lexend';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.6;
+    color: rgb(224, 228, 250);
+    margin: 0;
+}
+
+.FeatureList{
+    text-align: left;
+    font-family: 'Lexend';
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 2;
+    color: rgb(224, 228, 250);
+    margin: 0;
+    padding-left: 22px;
+}
+
+.ContactEmail{
+    text-align: left;
+    font-family: 'Lexend';
+    font-weight: 700;
+    font-size: 30px;
+    color: #6a7cff;
+    margin: 15px 0 0 0;
+}
+
+.WelcomeText{
+
+
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    font-family: 'Lexend';
+    font-weight: 700;
+
+    text-align: center;
+}
