@@ -4,95 +4,198 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Insights</title>
 
     <link rel="stylesheet" href="Main.css">
-   
-    
+    <link rel="stylesheet" href="Insights.css">
+
 </head>
 
 
 <body>
 
+  <div id="scale-stage">
+
        <div class = "Wrapper Round">
-             
+
+              <div class = "Round InsightsMain">
+                     <div class = "Round Label" style="position: relative;">
+                             <p class="WelcomeText"> Income Insights </p>
+                             <div class="FilterContainer">
+                                    <label for="insightsTimeFrame">Time Frame: </label>
+                                    <select id="insightsTimeFrame" class="FilterSelect">
+                                           <option value="this-month">This Month</option>
+                                           <option value="last-30">Last 30 Days</option>
+                                           <option value="last-90">Last 90 Days</option>
+                                           <option value="this-year">This Year</option>
+                                           <option value="all">All Time</option>
+                                    </select>
+                             </div>
+                     </div>
+
+                     <div class="InsightsMainBody">
+                            <div class="InsightStatCard">
+                                   <span class="SummaryLabel">Total Income</span>
+                                   <span class="InsightBigValue" id="totalIncomeValue">0.00$</span>
+                                   <p class="PanelHint soft">All income logged in this time frame</p>
+                            </div>
+                            <div class="InsightStatCard">
+                                   <span class="SummaryLabel">Saved</span>
+                                   <span class="InsightBigValue positive" id="savedValue">0.00$</span>
+                                   <p class="InsightPct" id="savedPct">0% of income</p>
+                            </div>
+                            <div class="InsightStatCard">
+                                   <span class="SummaryLabel">Spent</span>
+                                   <span class="InsightBigValue expense" id="spentValue">0.00$</span>
+                                   <p class="InsightPct" id="spentPct">0% of income</p>
+                            </div>
+                            <div class="SaveSpendBars">
+                                   <div class="BarRow">
+                                          <span class="BarLabel">Saved</span>
+                                          <div class="ProgressBarTrack">
+                                                 <div class="ProgressBarFill save" id="savedBar"></div>
+                                          </div>
+                                          <span class="BarPct" id="savedBarPct">0%</span>
+                                   </div>
+                                   <div class="BarRow">
+                                          <span class="BarLabel">Spent</span>
+                                          <div class="ProgressBarTrack">
+                                                 <div class="ProgressBarFill spend" id="spentBar"></div>
+                                          </div>
+                                          <span class="BarPct" id="spentBarPct">0%</span>
+                                   </div>
+                            </div>
+                     </div>
+              </div>
+
+              <div class = "Round BottomCat">
+                     <div class = "Round Label">
+                             <p class="WelcomeText"> By Category </p>
+                     </div>
+                     <div class="BottomCatContent ChartContainer">
+                            <canvas id="insightsCategoryChart"></canvas>
+                            <div id="insightsChartEmpty" class="EmptyState">No spending in this time frame.</div>
+                     </div>
+              </div>
+
+              <div class = "Round BottomCat">
+                     <div class = "Round Label">
+                             <p class="WelcomeText"> % of Income </p>
+                     </div>
+                     <div class="BottomCatContent ScrollableContent" id="insightsCategoryList">
+                            <div class="EmptyState">No expense categories in this time frame.</div>
+                     </div>
+              </div>
+
+              <div class = "Round BottomCat">
+                     <div class = "Round Label">
+                             <p class="WelcomeText"> Snapshot </p>
+                     </div>
+                     <div class="BottomCatContent SnapshotBody" id="insightsSnapshot">
+                            <div class="SnapshotRow">
+                                   <span>Income entries</span>
+                                   <strong id="incomeCount">0</strong>
+                            </div>
+                            <div class="SnapshotRow">
+                                   <span>Expense entries</span>
+                                   <strong id="expenseCount">0</strong>
+                            </div>
+                            <div class="SnapshotRow">
+                                   <span>Categories used</span>
+                                   <strong id="categoryCount">0</strong>
+                            </div>
+                            <div class="SnapshotRow">
+                                   <span>Avg expense</span>
+                                   <strong id="avgExpense">0.00$</strong>
+                            </div>
+                     </div>
+              </div>
+
        </div>
 
-       <div class = "Total Round"> 
+       <div class = "Total Round">
               <p class="Total-Amount"> 00,00.00$ </p>
-
-
               <p class="Total-Amount-Label"> ACCOUNTS TOTAL </p>
        </div>
 
-        <div class = "Nav Round"> 
+       <div class = "Nav Round">
 
               <br>
               <br>
               <br>
-                     
+
                      <a href="Overview.html" style="text-decoration: none; color: inherit;">
-                            <div class = " Round NavButton"> 
+                            <div class = " Round NavButton">
                                  <img src="Icons/Overview.png" style="width: 40px; height: 40px;" class = "Icon">
                                   Overview
-                            </div>       
+                            </div>
                      </a>
-                   
+
               <br>
               <br>
                      <a href="Trends.html" style="text-decoration: none; color: inherit;">
-                            <div class = " NavButton Round"> 
+                            <div class = " NavButton Round">
                                    <img src="Icons/Trends.png" style="width: 40px; height: 40px;" class = "Icon">
                                    Trends
                             </div>
                      </a>
-              
+
               <br>
               <br>
-                     <a href="Insights.html" style="text-decoration: none; color: inherit;">
-                            <div class = " CurrentPage Round"> 
-                                   <img src="Icons/Insights.png" style="width: 40px; height: 40px;" class = "Icon">
-                                   Insights
-                            </div>
-                     </a>
-              
+                     <div class = " CurrentPage Round">
+                           <img src="Icons/Insights.png" style="width: 40px; height: 40px;" class = "Icon">
+                            Insights
+                     </div>
+
               <br>
               <br>
                      <a href="Goals.html" style="text-decoration: none; color: inherit;">
-                            <div class = " NavButton Round"> 
+                            <div class = " NavButton Round">
                                    <img src="Icons/Goals.png" style="width: 40px; height: 40px;" class = "Icon">
                                    Goals
                             </div>
                      </a>
-              
+
               <br>
               <br>
                      <a href="Add.html" style="text-decoration: none; color: inherit;">
-                            <div class = " NavButton Round"> 
+                            <div class = " NavButton Round">
                                    <img src="Icons/Add.png" style="width: 40px; height: 40px;" class = "Icon">
                                    Add
                             </div>
                      </a>
-              
+
               <br>
               <br>
                         <a href="About.html" style="text-decoration: none; color: inherit;">
-                            <div class = " NavButton Round"> 
+                            <div class = " NavButton Round">
                                  <img src="Icons/About.png" style="width: 40px; height: 40px;" class = "Icon">
                                  About Us
                             </div>
                         </a>
-                           
-
-
 
        </div>
 
-        <div class = "Footer"> 
+       <div class = "Footer">
               <img src="Logos/BBLogoFull.png" style="width: 375px; height: 375px;" class = "Logo">
        </div>
 
-     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-     <script src="Main.js"></script>
+  </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="Main.js"></script>
+        <script src="Insights.js"></script>
+       <script>
+        (function () {
+          var DESIGN_W = 2475, DESIGN_H = 1320;
+          var stage = document.getElementById('scale-stage');
+          function fit() {
+            var scale = Math.min(window.innerWidth / DESIGN_W, window.innerHeight / DESIGN_H);
+            stage.style.transform = 'scale(' + scale + ')';
+          }
+          window.addEventListener('resize', fit);
+          fit();
+        })();
+       </script>
 </body>
 </html>
