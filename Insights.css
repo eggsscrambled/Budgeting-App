@@ -37,50 +37,6 @@
     box-shadow: 0 0px 100px rgba(2, 2, 8, 0.281);
 }
 
-.FilterContainer{
-    position: absolute;
-    right: 30px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'Lexend';
-    font-size: 16px;
-    color: rgba(255, 255, 255, 0.7);
-    font-weight: 300;
-    z-index: 2;
-}
-
-.FilterSelect{
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color: white;
-    font-family: 'Lexend';
-    font-size: 16px;
-    font-weight: 400;
-    padding: 6px 14px;
-    border-radius: 12px;
-    outline: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.FilterSelect:hover{
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.3);
-}
-
-.FilterSelect:focus{
-    border-color: #6cf577;
-    box-shadow: 0 0 8px rgba(108, 245, 119, 0.3);
-}
-
-.FilterSelect option{
-    background: #1c1c38;
-    color: white;
-}
-
 .InsightsMainBody{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
