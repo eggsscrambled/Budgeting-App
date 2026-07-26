@@ -6,7 +6,9 @@
     margin-top: 50px;
 
     color: rgb(255, 255, 255);
+    font-size: 25px;
     font-family: 'Lexend';
+    font-weight: 700;
 
     text-align: center;
     padding-top: 1px;
@@ -17,6 +19,8 @@
 }
 
 .AboutIntro{
+    position: relative;
+    z-index: 1;
     display: flex;
     align-items: center;
     gap: 50px;
@@ -38,7 +42,7 @@
     font-size: 20px;
     line-height: 1.6;
     color: rgb(224, 228, 250);
-    margin: -75px 0 0 0;
+    margin: 0;
 }
 
 .AboutCat{
@@ -49,7 +53,9 @@
     margin-top: 50px;
 
     color: rgb(255, 255, 255);
+    font-size: 25px;
     font-family: 'Lexend';
+    font-weight: 700;
 
     text-align: center;
     padding-top: 1px;
@@ -61,6 +67,8 @@
 }
 
 .AboutCatBody{
+    position: relative;
+    z-index: 1;
     padding: 35px 40px;
     box-sizing: border-box;
 }
@@ -95,6 +103,3 @@
     margin: 15px 0 0 0;
 }
 
-.WelcomeText{
-    font-size: 25px;
-}

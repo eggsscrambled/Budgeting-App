@@ -35,10 +35,12 @@ body {
     background-color: rgba(12, 8, 34, 0.671);
     box-shadow: 0 0px 20px rgba(2, 3, 27, 0.349);
     position: relative;
+    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .WelcomeText{
@@ -47,6 +49,7 @@ body {
     width: 100%;
     text-align: center;
     color: rgb(255, 255, 255);
+    font-size: 25px;
     font-family: 'Lexend';
     font-weight: 700;
     line-height: 1;

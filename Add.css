@@ -6,12 +6,13 @@
     margin-top: 50px;
 
     color: rgb(255, 255, 255);
+    font-size: 25px;
     font-family: 'Lexend';
+    font-weight: 700;
 
     text-align: center;
     padding-top: 1px;
     float: left;
-    overflow: hidden;
 
     background-color: rgba(255, 255, 255, 0.034);
     box-shadow: 0 0px 100px rgba(2, 2, 8, 0.281);
@@ -25,7 +26,9 @@
     margin-top: 50px;
 
     color: rgb(255, 255, 255);
+    font-size: 25px;
     font-family: 'Lexend';
+    font-weight: 700;
 
     text-align: center;
     padding-top: 1px;
@@ -36,12 +39,14 @@
 }
 
 .AddForm{
+    position: relative;
+    z-index: 1;
     padding: 30px 60px 40px;
     text-align: left;
     box-sizing: border-box;
     display: flex;
     gap: 40px;
-    height: 525px;
+    height: 500px;
     overflow: hidden;
 }
 
@@ -303,6 +308,8 @@
 }
 
 .EntryList{
+    position: relative;
+    z-index: 1;
     padding: 20px 50px;
     text-align: left;
     overflow-y: auto;
@@ -378,10 +385,6 @@
     background-color: #ff5c5c;
     color: #2b0d0d;
     box-shadow: 0 0px 15px rgba(255, 92, 92, 0.6);
-}
-
-.WelcomeText{
-    font-size: 25px;
 }
 
 /* Color Customization & Tabs Styling */

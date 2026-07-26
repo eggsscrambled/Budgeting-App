@@ -37,10 +37,6 @@
     box-shadow: 0 0px 100px rgba(2, 2, 8, 0.281);
 }
 
-.WelcomeText{
-    font-size: 25px;
-}
-
 .FilterContainer{
     position: absolute;
     right: 30px;
