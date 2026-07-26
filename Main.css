@@ -31,11 +31,12 @@ body {
 
 .Label{
     margin-top: -26px;
+    margin-bottom: 26px;
     height: 75px;
-    background-color: rgba(12, 8, 34, 0.671);
+    background-color: rgb(12, 8, 34);
     box-shadow: 0 0px 20px rgba(2, 3, 27, 0.349);
     position: relative;
-    z-index: 2;
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,6 +46,7 @@ body {
 
 .WelcomeText{
     position: relative;
+    z-index: 1;
     margin: 0;
     width: 100%;
     text-align: center;
