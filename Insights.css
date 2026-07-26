@@ -6,7 +6,9 @@
     margin-top: 50px;
 
     color: rgb(255, 255, 255);
+    font-size: 25px;
     font-family: 'Lexend';
+    font-weight: 700;
 
     text-align: center;
     padding-top: 1px;
@@ -24,6 +26,7 @@
     margin-top: 50px;
 
     color: rgb(255, 255, 255);
+    font-size: 25px;
     font-family: 'Lexend';
     font-weight: 700;
 
@@ -37,19 +40,25 @@
 .Label{
     margin-top: -26px;
     height: 75px;
-    background-color: rgba(12, 8, 34, 0.671);
+    background-color: rgba(12, 8, 34, 0.92);
     box-shadow: 0 0px 20px rgba(2, 3, 27, 0.349);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .WelcomeText{
     position: relative;
-    top: 25%;
+    margin: 0;
+    width: 100%;
+    text-align: center;
     color: rgb(255, 255, 255);
-    font-size: 50px;
+    font-size: 25px;
     font-family: 'Lexend';
     font-weight: 700;
-    text-align: center;
-    margin: 0;
+    line-height: 1;
 }
 
 .FilterContainer{
@@ -64,6 +73,7 @@
     font-size: 16px;
     color: rgba(255, 255, 255, 0.7);
     font-weight: 300;
+    z-index: 2;
 }
 
 .FilterSelect{
