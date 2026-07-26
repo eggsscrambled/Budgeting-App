@@ -156,7 +156,7 @@
             return;
           }
           function fit() {
-            var scale = Math.min(window.innerWidth / DESIGN_W, window.innerHeight / DESIGN_H);
+            var scale = window.innerWidth / DESIGN_W;
             stage.style.transform = 'scale(' + scale + ')';
           }
           window.addEventListener('resize', fit);

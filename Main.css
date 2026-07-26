@@ -17,18 +17,7 @@ body {
     width: 2475px;
     height: 1320px;
     transform-origin: top left;
-    background-color: #17183a;
-}
-
-#scale-stage::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 275px;
-    height: 1320px;
-    background-color: #17183a;
-    z-index: 0;
+    background-color: #282b53;
 }
 
 
@@ -98,27 +87,30 @@ a:active{
 .Wrapper{
     position: absolute;
     top: 0;
-    left: 275px;
+    left: 0;
     z-index: 1;
 
-    width: 2200px;
+    width: 2475px;
     height: 1320px;
+    padding-left: 275px;
+    box-sizing: border-box;
 
     background-color: #282b53;
-    box-shadow: 0 0px 10px rgb(5, 3, 39);
-    border-radius: 0 30px 30px 0;
+    background-image: linear-gradient(to right, #17183a 0, #17183a 275px, #282b53 275px, #282b53 100%);
+    box-shadow: none;
+    border-radius: 0;
 }
 
 .Total{
-    position: relative;
-    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
     background-color: #17183a;
 
     width: 275px;
     height: 250px;
-    margin-left: 0;
-    margin-top: 0;
-    float:left;
+    margin: 0;
     border-radius: 0;
     box-shadow: none;
 }
@@ -142,8 +134,10 @@ a:active{
 }
 
 .Nav{
-    position: relative;
-    z-index: 2;
+    position: absolute;
+    top: 250px;
+    left: 0;
+    z-index: 5;
     width: 275px;
     height: 770px;
     text-align: left;
@@ -151,9 +145,7 @@ a:active{
     font-size: 25px;
     font-family: 'Lexend';
     font-weight: 100;
-    margin-left: -275px;
-    margin-top: 250px;
-    float:left;
+    margin: 0;
     border-radius: 0;
 
      background-color: #17183a;
@@ -219,16 +211,18 @@ a:active{
 }
 
 .Footer{
-    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 1020px;
+    z-index: 4;
+    width: 2475px;
     height: 300px;
+    margin: 0;
     text-align: left;
     font-size: 15px;
     font-family: 'Lexend';
     font-weight: 100;
     color: rgb(255, 255, 255);
-
-    float: left;
-    margin-top: 900px;
 
     box-shadow: 0 0px 30px rgb(0, 0, 0);
     background-color: #080814;
