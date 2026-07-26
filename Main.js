@@ -422,6 +422,52 @@ var BudgetData = (function () {
     };
 })();
 
-document.addEventListener('DOMContentLoaded', function () {
+var ScaleStage = (function () {
+    var DESIGN_W = 2475;
+    var DESIGN_H = 1320;
+
+    function fit() {
+        var stage = document.getElementById('scale-stage');
+        if (!stage) return;
+
+        var viewW = window.innerWidth;
+        var viewH = window.innerHeight;
+
+        if (window.visualViewport) {
+            viewW = window.visualViewport.width;
+            viewH = window.visualViewport.height;
+        }
+
+        var scale = Math.min(viewW / DESIGN_W, viewH / DESIGN_H);
+        if (!isFinite(scale) || scale <= 0) scale = 1;
+
+        var offsetX = (viewW - DESIGN_W * scale) / 2;
+        var offsetY = (viewH - DESIGN_H * scale) / 2;
+
+        stage.style.transform =
+            'translate(' + offsetX + 'px, ' + offsetY + 'px) scale(' + scale + ')';
+    }
+
+    function init() {
+        fit();
+        window.addEventListener('resize', fit);
+        window.addEventListener('orientationchange', fit);
+        if (window.visualViewport) {
+            window.visualViewport.addEventListener('resize', fit);
+            window.visualViewport.addEventListener('scroll', fit);
+        }
+    }
+
+    return { fit: fit, init: init };
+})();
+
+function bootApp() {
     BudgetData.updateTotalDisplay();
-});
+    ScaleStage.init();
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bootApp);
+} else {
+    bootApp();
+}
