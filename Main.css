@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
 
 html, body {
+    width: 100%;
     height: 100%;
     margin: 0;
     overflow: hidden;
@@ -8,6 +9,7 @@ html, body {
 
 body {
     background-color: #1c1c38;
+    position: relative;
 }
 
 #scale-stage {
@@ -17,6 +19,7 @@ body {
     width: 2475px;
     height: 1320px;
     transform-origin: top left;
+    will-change: transform;
 }
 
 
