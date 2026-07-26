@@ -86,9 +86,9 @@ a:active{
 .Wrapper{
     position: absolute;
     top: -3px;
-    right: -40px;
+    left: 275px;
 
-    width: 2090px;
+    width: 2200px;
     height: 1320px;
 
     background-color: #282b53;
@@ -98,9 +98,9 @@ a:active{
 .Total{
     background-color: #17183a;
 
-    Width: 275px;
+    width: 275px;
     height: 200px;
-    margin-left: 70px;
+    margin-left: 0;
     margin-top: 50px;
     float:left;
     box-shadow: 0 0px 30px rgba(57, 56, 107, 0.925);
