@@ -335,6 +335,64 @@ var BudgetData = (function () {
         return true;
     }
 
+    var GOALS_KEY = 'bb_goals';
+
+    function getGoals() {
+        return load(GOALS_KEY, {
+            monthlySavings: 0,
+            categoryBudgets: {}
+        });
+    }
+
+    function saveGoals(goals) {
+        save(GOALS_KEY, goals);
+    }
+
+    function setMonthlySavingsGoal(amount) {
+        var goals = getGoals();
+        goals.monthlySavings = Math.max(0, Number(amount) || 0);
+        saveGoals(goals);
+        return goals;
+    }
+
+    function setCategoryBudget(category, amount) {
+        var goals = getGoals();
+        if (!goals.categoryBudgets) goals.categoryBudgets = {};
+        goals.categoryBudgets[category] = Math.max(0, Number(amount) || 0);
+        saveGoals(goals);
+        return goals;
+    }
+
+    function removeCategoryBudget(category) {
+        var goals = getGoals();
+        if (!goals.categoryBudgets) return goals;
+        delete goals.categoryBudgets[category];
+        saveGoals(goals);
+        return goals;
+    }
+
+    function getMonthBounds(date) {
+        var d = date ? new Date(date) : new Date();
+        var start = new Date(d.getFullYear(), d.getMonth(), 1);
+        var end = new Date(d.getFullYear(), d.getMonth() + 1, 0);
+        function toStr(value) {
+            var m = String(value.getMonth() + 1);
+            var day = String(value.getDate());
+            if (m.length < 2) m = '0' + m;
+            if (day.length < 2) day = '0' + day;
+            return value.getFullYear() + '-' + m + '-' + day;
+        }
+        return { start: toStr(start), end: toStr(end) };
+    }
+
+    function getTransactionsInRange(startDate, endDate) {
+        return getTransactions().filter(function (t) {
+            if (startDate && t.date < startDate) return false;
+            if (endDate && t.date > endDate) return false;
+            return true;
+        });
+    }
+
     return {
         getAccounts: getAccounts,
         getAccount: getAccount,
@@ -353,6 +411,12 @@ var BudgetData = (function () {
         getCategories: getCategories,
         addCategory: addCategory,
         deleteCategory: deleteCategory,
+        getGoals: getGoals,
+        setMonthlySavingsGoal: setMonthlySavingsGoal,
+        setCategoryBudget: setCategoryBudget,
+        removeCategoryBudget: removeCategoryBudget,
+        getMonthBounds: getMonthBounds,
+        getTransactionsInRange: getTransactionsInRange,
         formatCurrency: formatCurrency,
         updateTotalDisplay: updateTotalDisplay
     };

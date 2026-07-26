@@ -4,95 +4,174 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Goals</title>
 
     <link rel="stylesheet" href="Main.css">
-   
-    
+    <link rel="stylesheet" href="Goals.css">
+
 </head>
 
 
 <body>
 
+  <div id="scale-stage">
+
        <div class = "Wrapper Round">
-             
+
+              <div class = "Round GoalsMain">
+                     <div class = "Round Label" style="position: relative;">
+                             <p class="WelcomeText"> Monthly Goals </p>
+                             <div class="MonthBadge" id="goalsMonthLabel">This Month</div>
+                     </div>
+
+                     <div class="GoalsMainBody">
+                            <div class="SavingsGoalPanel">
+                                   <span class="SectionTitle">Savings Goal</span>
+                                   <p class="PanelHint">How much do you want to save this month?</p>
+                                   <div class="GoalInputRow">
+                                          <input type="number" id="monthlySavingsInput" placeholder="0.00" min="0" step="0.01">
+                                          <button type="button" class="SmallBtn" id="saveSavingsGoalBtn">Save Goal</button>
+                                   </div>
+
+                                   <div class="SummaryGrid" id="goalsSummary">
+                                          <div class="SummaryTile">
+                                                 <span class="SummaryLabel">Income</span>
+                                                 <span class="SummaryValue" id="incomeThisMonth">0.00$</span>
+                                          </div>
+                                          <div class="SummaryTile">
+                                                 <span class="SummaryLabel">Savings Goal</span>
+                                                 <span class="SummaryValue accent" id="savingsGoalDisplay">0.00$</span>
+                                          </div>
+                                          <div class="SummaryTile">
+                                                 <span class="SummaryLabel">Available to Spend</span>
+                                                 <span class="SummaryValue" id="availableToSpend">0.00$</span>
+                                          </div>
+                                          <div class="SummaryTile">
+                                                 <span class="SummaryLabel">Spent So Far</span>
+                                                 <span class="SummaryValue expense" id="spentSoFar">0.00$</span>
+                                          </div>
+                                          <div class="SummaryTile wide">
+                                                 <span class="SummaryLabel">Left to Spend (to hit savings goal)</span>
+                                                 <span class="SummaryValue remaining" id="leftToSpend">0.00$</span>
+                                          </div>
+                                   </div>
+                            </div>
+
+                            <div class="OverallProgressPanel">
+                                   <span class="SectionTitle">Overall Budget</span>
+                                   <div class="BigStat" id="overallRemainingBig">0.00$</div>
+                                   <p class="BigStatLabel">remaining to spend this month</p>
+                                   <div class="ProgressBarTrack tall">
+                                          <div class="ProgressBarFill" id="overallSpendFill"></div>
+                                   </div>
+                                   <p class="ProgressMeta" id="overallSpendMeta">0% of available budget used</p>
+                                   <p class="PanelHint soft" id="overallHint">Set a savings goal and log income to see your remaining spend.</p>
+                            </div>
+                     </div>
+              </div>
+
+              <div class = "Round GoalsBottom">
+                     <div class = "Round Label">
+                             <p class="WelcomeText"> Category Budgets </p>
+                     </div>
+
+                     <div class="CategoryBudgetsBody">
+                            <div class="AddBudgetRow">
+                                   <select id="budgetCategorySelect"></select>
+                                   <input type="number" id="budgetAmountInput" placeholder="Budget amount" min="0" step="0.01">
+                                   <button type="button" class="SmallBtn" id="addBudgetBtn">+ Set Budget</button>
+                            </div>
+
+                            <div class="BudgetList ScrollableContent" id="categoryBudgetList">
+                                   <div class="EmptyState">No category budgets yet — pick a category and set a monthly limit.</div>
+                            </div>
+                     </div>
+              </div>
+
        </div>
 
-       <div class = "Total Round"> 
+       <div class = "Total Round">
               <p class="Total-Amount"> 00,00.00$ </p>
-
-
               <p class="Total-Amount-Label"> ACCOUNTS TOTAL </p>
        </div>
 
-       <div class = "Nav Round"> 
+       <div class = "Nav Round">
 
               <br>
               <br>
               <br>
-                     
+
                      <a href="Overview.html" style="text-decoration: none; color: inherit;">
-                            <div class = " Round NavButton"> 
+                            <div class = " Round NavButton">
                                  <img src="Icons/Overview.png" style="width: 40px; height: 40px;" class = "Icon">
                                   Overview
-                            </div>       
+                            </div>
                      </a>
-                   
+
               <br>
               <br>
                      <a href="Trends.html" style="text-decoration: none; color: inherit;">
-                            <div class = " NavButton Round"> 
+                            <div class = " NavButton Round">
                                    <img src="Icons/Trends.png" style="width: 40px; height: 40px;" class = "Icon">
                                    Trends
                             </div>
                      </a>
-              
+
               <br>
               <br>
                      <a href="Insights.html" style="text-decoration: none; color: inherit;">
-                            <div class = " NavButton Round"> 
+                            <div class = " NavButton Round">
                                    <img src="Icons/Insights.png" style="width: 40px; height: 40px;" class = "Icon">
                                    Insights
                             </div>
                      </a>
-              
+
               <br>
               <br>
-                     <a href="Goals.html" style="text-decoration: none; color: inherit;">
-                            <div class = " CurrentPage Round"> 
-                                   <img src="Icons/Goals.png" style="width: 40px; height: 40px;" class = "Icon">
-                                   Goals
-                            </div>
-                     </a>
-              
+                     <div class = " CurrentPage Round">
+                           <img src="Icons/Goals.png" style="width: 40px; height: 40px;" class = "Icon">
+                            Goals
+                     </div>
+
               <br>
               <br>
                      <a href="Add.html" style="text-decoration: none; color: inherit;">
-                            <div class = " NavButton Round"> 
+                            <div class = " NavButton Round">
                                    <img src="Icons/Add.png" style="width: 40px; height: 40px;" class = "Icon">
                                    Add
                             </div>
                      </a>
-              
+
               <br>
               <br>
                         <a href="About.html" style="text-decoration: none; color: inherit;">
-                            <div class = " NavButton Round"> 
+                            <div class = " NavButton Round">
                                  <img src="Icons/About.png" style="width: 40px; height: 40px;" class = "Icon">
                                  About Us
                             </div>
                         </a>
-                           
-
-
 
        </div>
 
-        <div class = "Footer"> 
+       <div class = "Footer">
               <img src="Logos/BBLogoFull.png" style="width: 375px; height: 375px;" class = "Logo">
        </div>
 
-     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-     <script src="Main.js"></script>
+  </div>
+
+       <script src="Main.js"></script>
+       <script src="Goals.js"></script>
+       <script>
+        (function () {
+          var DESIGN_W = 2475, DESIGN_H = 1320;
+          var stage = document.getElementById('scale-stage');
+          function fit() {
+            var scale = Math.min(window.innerWidth / DESIGN_W, window.innerHeight / DESIGN_H);
+            stage.style.transform = 'scale(' + scale + ')';
+          }
+          window.addEventListener('resize', fit);
+          fit();
+        })();
+       </script>
 </body>
 </html>

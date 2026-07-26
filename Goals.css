@@ -1,0 +1,370 @@
+.GoalsMain{
+    width: 2020px;
+    height: 600px;
+
+    margin-left: 60px;
+    margin-top: 50px;
+
+    color: rgb(255, 255, 255);
+    font-family: 'Lexend';
+
+    text-align: center;
+    padding-top: 1px;
+    float: left;
+
+    background-color: rgba(255, 255, 255, 0.034);
+    box-shadow: 0 0px 100px rgba(2, 2, 8, 0.281);
+}
+
+.GoalsBottom{
+    width: 2020px;
+    height: 558px;
+
+    margin-left: 60px;
+    margin-top: 50px;
+
+    color: rgb(255, 255, 255);
+    font-family: 'Lexend';
+
+    text-align: center;
+    padding-top: 1px;
+    float: left;
+
+    background-color: rgba(255, 255, 255, 0.034);
+    box-shadow: 0 0px 100px rgba(2, 2, 8, 0.281);
+}
+
+.Label{
+    margin-top: -26px;
+    height: 75px;
+    background-color: rgba(12, 8, 34, 0.671);
+    box-shadow: 0 0px 20px rgba(2, 3, 27, 0.349);
+}
+
+.WelcomeText{
+    position: relative;
+    top: 25%;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    font-family: 'Lexend';
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+}
+
+.MonthBadge{
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Lexend';
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 6px 14px;
+    border-radius: 12px;
+}
+
+.GoalsMainBody{
+    display: flex;
+    gap: 40px;
+    padding: 30px 50px 40px;
+    box-sizing: border-box;
+    text-align: left;
+    height: 490px;
+}
+
+.SavingsGoalPanel{
+    flex: 1.3;
+    min-width: 0;
+}
+
+.OverallProgressPanel{
+    flex: 0.9;
+    min-width: 0;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 28px 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.SectionTitle{
+    display: block;
+    font-family: 'Lexend';
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.PanelHint{
+    font-family: 'Lexend';
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.55);
+    margin: 0 0 18px 0;
+}
+
+.PanelHint.soft{
+    margin-top: 18px;
+    margin-bottom: 0;
+}
+
+.GoalInputRow{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.GoalInputRow input,
+.AddBudgetRow input,
+.AddBudgetRow select{
+    box-sizing: border-box;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: #1c1c38;
+    color: rgb(255, 255, 255);
+    font-family: 'Lexend';
+    font-size: 17px;
+}
+
+.GoalInputRow input{
+    width: 280px;
+}
+
+.GoalInputRow input:focus,
+.AddBudgetRow input:focus,
+.AddBudgetRow select:focus{
+    outline: none;
+    border-color: #6a7cff;
+}
+
+.SmallBtn{
+    padding: 14px 20px;
+    border: none;
+    border-radius: 12px;
+    background-color: #3d3e74;
+    color: rgb(255, 255, 255);
+    font-family: 'Lexend';
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.SmallBtn:hover{
+    background-color: #4e50a0;
+}
+
+.SummaryGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.SummaryTile{
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 16px 18px;
+}
+
+.SummaryTile.wide{
+    grid-column: 1 / -1;
+}
+
+.SummaryLabel{
+    display: block;
+    font-family: 'Lexend';
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 6px;
+}
+
+.SummaryValue{
+    font-family: 'Lexend';
+    font-size: 26px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.SummaryValue.accent{ color: #6a7cff; }
+.SummaryValue.expense{ color: #ff6b6b; }
+.SummaryValue.remaining{ color: #6cf577; }
+.SummaryValue.remaining.over{ color: #ff5e7e; }
+
+.BigStat{
+    font-family: 'Lexend';
+    font-size: 52px;
+    font-weight: 900;
+    color: #6cf577;
+    margin-top: 8px;
+}
+
+.BigStat.over{
+    color: #ff5e7e;
+}
+
+.BigStatLabel{
+    font-family: 'Lexend';
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.55);
+    margin: 4px 0 24px 0;
+}
+
+.ProgressBarTrack{
+    width: 100%;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.ProgressBarTrack.tall{
+    height: 18px;
+    border-radius: 9px;
+}
+
+.ProgressBarFill{
+    height: 100%;
+    border-radius: 6px;
+    width: 0%;
+    transition: width 0.8s cubic-bezier(0.1, 0.8, 0.25, 1.0);
+    background: linear-gradient(90deg, #6cf577aa, #6cf577);
+    box-shadow: 0 0 8px rgba(108, 245, 119, 0.2);
+}
+
+.ProgressBarFill.warn{
+    background: linear-gradient(90deg, #ffb347aa, #ffb347);
+}
+
+.ProgressBarFill.over{
+    background: linear-gradient(90deg, #ff5e7eaa, #ff5e7e);
+}
+
+.ProgressMeta{
+    font-family: 'Lexend';
+    font-size: 15px;
+    font-weight: 400;
+    color: #b0bdf7;
+    margin-top: 12px;
+}
+
+.CategoryBudgetsBody{
+    padding: 25px 50px 30px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.AddBudgetRow{
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.AddBudgetRow select{
+    width: 320px;
+}
+
+.AddBudgetRow input{
+    width: 220px;
+}
+
+.BudgetList{
+    height: 360px;
+    overflow-y: auto;
+    padding-right: 6px;
+}
+
+.ScrollableContent::-webkit-scrollbar{
+    width: 6px;
+}
+
+.ScrollableContent::-webkit-scrollbar-track{
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 10px;
+}
+
+.ScrollableContent::-webkit-scrollbar-thumb{
+    background: rgba(108, 110, 163, 0.4);
+    border-radius: 10px;
+}
+
+.EmptyState{
+    font-family: 'Lexend';
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 200;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.BudgetItem{
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 18px;
+    padding: 18px 22px;
+    margin-bottom: 14px;
+}
+
+.BudgetItemHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.BudgetCatName{
+    font-family: 'Lexend';
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.BudgetAmounts{
+    font-family: 'Lexend';
+    font-size: 16px;
+    font-weight: 400;
+    color: #b0bdf7;
+}
+
+.BudgetMetaRow{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-family: 'Lexend';
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.DeleteBudgetBtn{
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.6);
+    font-family: 'Lexend';
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    padding: 0;
+    cursor: pointer;
+    margin-left: 14px;
+}
+
+.DeleteBudgetBtn:hover{
+    background-color: #ff5c5c;
+    color: #2b0d0d;
+}
