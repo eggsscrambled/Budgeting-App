@@ -38,28 +38,8 @@
     box-shadow: 0 0px 100px rgba(2, 2, 8, 0.281);
 }
 
-.Label{
-    margin-top: -26px;
-    height: 75px;
-    background-color: rgba(12, 8, 34, 0.92);
-    box-shadow: 0 0px 20px rgba(2, 3, 27, 0.349);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
 .WelcomeText{
-    position: relative;
-    margin: 0;
-    width: 100%;
-    text-align: center;
-    color: rgb(255, 255, 255);
     font-size: 25px;
-    font-family: 'Lexend';
-    font-weight: 700;
-    line-height: 1;
 }
 
 .MonthBadge{

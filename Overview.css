@@ -40,21 +40,6 @@
 }
 
 
-.Label{
-    margin-top: -26px;
-
-
-    height: 75px;
-
-    background-color: rgba(12, 8, 34, 0.671);
-    box-shadow: 0 0px 20px rgba(2, 3, 27, 0.349);
-}
-
-.WelcomeText{
-    position: relative;
-    top: 25%;
-}
-
 .OverallChart{
     width: 1970px;
     height: 485px;
