@@ -7,7 +7,7 @@ html, body {
 }
 
 body {
-    background-color: #17183a;
+    background-color: #1c1c38;
 }
 
 #scale-stage {
@@ -17,7 +17,6 @@ body {
     width: 2475px;
     height: 1320px;
     transform-origin: top left;
-    background-color: #282b53;
 }
 
 
@@ -86,37 +85,29 @@ a:active{
 
 .Wrapper{
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    top: -3px;
+    right: -40px;
 
-    width: 2475px;
+    width: 2090px;
     height: 1320px;
-    padding-left: 275px;
-    box-sizing: border-box;
 
     background-color: #282b53;
-    background-image: linear-gradient(to right, #17183a 0, #17183a 275px, #282b53 275px, #282b53 100%);
-    box-shadow: none;
-    border-radius: 0;
+    box-shadow: 0 0px 10px rgb(5, 3, 39);
 }
 
 .Total{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 5;
     background-color: #17183a;
 
-    width: 275px;
-    height: 250px;
-    margin: 0;
-    border-radius: 0;
-    box-shadow: none;
+    Width: 275px;
+    height: 200px;
+    margin-left: 70px;
+    margin-top: 50px;
+    float:left;
+    box-shadow: 0 0px 30px rgba(57, 56, 107, 0.925);
 }
 
 .Total-Amount{
-    margin-top: 80px;
+    margin-top: 55px;
     font-size: 45px;
     text-align: center;
     font-family: 'Lexend';
@@ -134,71 +125,68 @@ a:active{
 }
 
 .Nav{
-    position: absolute;
-    top: 250px;
-    left: 0;
-    z-index: 5;
     width: 275px;
-    height: 770px;
+    height: 700px;
     text-align: left;
     color: rgb(204, 209, 255);
     font-size: 25px;
     font-family: 'Lexend';
     font-weight: 100;
-    margin: 0;
-    border-radius: 0;
+    margin-left: -275px;
+    margin-top: 350px;
+    float:left;
 
-     background-color: #17183a;
-     box-shadow: none;
+     background-color: #202141;
+     box-shadow: 0 0px 1000px rgba(9, 9, 24, 0.719);
 }
 
 .NavButton{
-    width: 235px;
+    width: 195px;
     height: 65px;
-    margin: -25px 0 0 20px;
+    margin: auto;
 
     text-align: left;
     padding-left: 40px;
-    box-sizing: border-box;
 
     color: rgb(204, 209, 255);
     font-size: 25px;
     font-family: 'Lexend';
     font-weight: 200;
+    margin-top: -25px;
     line-height: 65px;
     background-color: #252649;
     box-shadow: 0 0px 10px rgba(29, 29, 53, 0.685);
 }
 
 .NavButton:hover{
-    width: 235px;
+    width: 195px;
     height: 65px;
-    margin: -25px 0 0 20px;
+    margin: auto;
 
     text-align: left;
     padding-left: 40px;
-    box-sizing: border-box;
     color: rgb(255, 255, 255);
     font-size: 25px;
     font-family: 'Lexend';
     font-weight: 700;
+    margin-top: -25px;
     line-height: 65px;
     background-color: #3d3e74;
     box-shadow: 0 0px 25px rgba(68, 68, 168, 0.685);
 }
 
 .CurrentPage{
-    width: 235px;
+    width: 195px;
     height: 65px;
-    margin: -25px 0 0 20px;
+    margin: auto;
 
     text-align: left;
     padding-left: 40px;
-    box-sizing: border-box;
     color: rgb(255, 255, 255);
     font-size: 25px;
     font-family: 'Lexend';
     font-weight: 700;
+    margin-top: -25px;
     line-height: 65px;
     background-color: #3d3e74;
     box-shadow: 0 0px 25px rgba(68, 68, 168, 0.685);
@@ -211,18 +199,16 @@ a:active{
 }
 
 .Footer{
-    position: absolute;
-    left: 0;
-    top: 1020px;
-    z-index: 4;
-    width: 2475px;
+    width: 100%;
     height: 300px;
-    margin: 0;
     text-align: left;
     font-size: 15px;
     font-family: 'Lexend';
     font-weight: 100;
     color: rgb(255, 255, 255);
+
+    float: left;
+    margin-top: 900px;
 
     box-shadow: 0 0px 30px rgb(0, 0, 0);
     background-color: #080814;
