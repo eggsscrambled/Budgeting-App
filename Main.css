@@ -7,7 +7,7 @@ html, body {
 }
 
 body {
-    background-color: #1c1c38;
+    background-color: #17183a;
 }
 
 #scale-stage {
@@ -17,6 +17,18 @@ body {
     width: 2475px;
     height: 1320px;
     transform-origin: top left;
+    background-color: #17183a;
+}
+
+#scale-stage::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 275px;
+    height: 1320px;
+    background-color: #17183a;
+    z-index: 0;
 }
 
 
@@ -85,29 +97,34 @@ a:active{
 
 .Wrapper{
     position: absolute;
-    top: -3px;
+    top: 0;
     left: 275px;
+    z-index: 1;
 
     width: 2200px;
     height: 1320px;
 
     background-color: #282b53;
     box-shadow: 0 0px 10px rgb(5, 3, 39);
+    border-radius: 0 30px 30px 0;
 }
 
 .Total{
+    position: relative;
+    z-index: 2;
     background-color: #17183a;
 
     width: 275px;
-    height: 200px;
+    height: 250px;
     margin-left: 0;
-    margin-top: 50px;
+    margin-top: 0;
     float:left;
-    box-shadow: 0 0px 30px rgba(57, 56, 107, 0.925);
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .Total-Amount{
-    margin-top: 55px;
+    margin-top: 80px;
     font-size: 45px;
     text-align: center;
     font-family: 'Lexend';
@@ -125,68 +142,71 @@ a:active{
 }
 
 .Nav{
+    position: relative;
+    z-index: 2;
     width: 275px;
-    height: 700px;
+    height: 770px;
     text-align: left;
     color: rgb(204, 209, 255);
     font-size: 25px;
     font-family: 'Lexend';
     font-weight: 100;
     margin-left: -275px;
-    margin-top: 350px;
+    margin-top: 250px;
     float:left;
+    border-radius: 0;
 
-     background-color: #202141;
-     box-shadow: 0 0px 1000px rgba(9, 9, 24, 0.719);
+     background-color: #17183a;
+     box-shadow: none;
 }
 
 .NavButton{
-    width: 195px;
+    width: 235px;
     height: 65px;
-    margin: auto;
+    margin: -25px 0 0 20px;
 
     text-align: left;
     padding-left: 40px;
+    box-sizing: border-box;
 
     color: rgb(204, 209, 255);
     font-size: 25px;
     font-family: 'Lexend';
     font-weight: 200;
-    margin-top: -25px;
     line-height: 65px;
     background-color: #252649;
     box-shadow: 0 0px 10px rgba(29, 29, 53, 0.685);
 }
 
 .NavButton:hover{
-    width: 195px;
+    width: 235px;
     height: 65px;
-    margin: auto;
+    margin: -25px 0 0 20px;
 
     text-align: left;
     padding-left: 40px;
+    box-sizing: border-box;
     color: rgb(255, 255, 255);
     font-size: 25px;
     font-family: 'Lexend';
     font-weight: 700;
-    margin-top: -25px;
     line-height: 65px;
     background-color: #3d3e74;
     box-shadow: 0 0px 25px rgba(68, 68, 168, 0.685);
 }
 
 .CurrentPage{
-    width: 195px;
+    width: 235px;
     height: 65px;
-    margin: auto;
+    margin: -25px 0 0 20px;
 
     text-align: left;
     padding-left: 40px;
+    box-sizing: border-box;
     color: rgb(255, 255, 255);
     font-size: 25px;
     font-family: 'Lexend';
     font-weight: 700;
-    margin-top: -25px;
     line-height: 65px;
     background-color: #3d3e74;
     box-shadow: 0 0px 25px rgba(68, 68, 168, 0.685);
