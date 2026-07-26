@@ -189,7 +189,7 @@
           var DESIGN_W = 2475, DESIGN_H = 1320;
           var stage = document.getElementById('scale-stage');
           function fit() {
-            var scale = window.innerWidth / DESIGN_W;
+            var scale = Math.min(window.innerWidth / DESIGN_W, window.innerHeight / DESIGN_H);
             stage.style.transform = 'scale(' + scale + ')';
           }
           window.addEventListener('resize', fit);
